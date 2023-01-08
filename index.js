@@ -6,7 +6,7 @@ export const moonBlock = (selector, cb) => {
 
     return {
       others,
-      methods: cb(block, others)
+      methods: cb({block, others})
     }
   })
 
