@@ -1,14 +1,13 @@
 {
   "name": "@verno.digital/moon-block",
   "version": "1.0.0",
-  "description": "Вспомогательная функция, для работы с BEM блоками в js",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "author": "telegramm: @repcolding; site: https://verno.digital",
   "license": "MIT",
   "types": "./index.d.ts",
   "keywords": [
-    "BEM callback js function",
+    "@verno/module",
     "@verno.digital"
   ],
   "repository": {
