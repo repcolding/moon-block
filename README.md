@@ -20,7 +20,7 @@ yarn add @verno.digital/moon-block
 ## Пример
 
 ```js
-import { index } from '@verno.digital/moon-block'
+import { moonBlock } from '@verno.digital/moon-block'
 
 const closeOthers = (others) => {
   for (const comp of others) {
@@ -28,7 +28,7 @@ const closeOthers = (others) => {
   }
 }
 
-index('.button', ({ block, others }) => {
+moonBlock('.button', ({ block, others }) => {
   const open = () => {
     console.log('open')
   }

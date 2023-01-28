@@ -1,6 +1,6 @@
 {
   "name": "@verno.digital/moon-block",
-  "version": "1.0.2",
+  "version": "1.2.0",
   "main": "src/index.js",
   "type": "module",
   "author": "telegramm: @repcolding; site: https://verno.digital",
