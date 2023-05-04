@@ -18,33 +18,3 @@ yarn add @verno.digital/moon-block
 ```
 
 ## Пример
-
-```js
-import { moonBlock } from '@verno.digital/moon-block'
-
-const closeOthers = (others) => {
-  for (const comp of others) {
-    comp.close()
-  }
-}
-
-moonBlock('.button', ({ block, others }) => {
-  const open = () => {
-    console.log('open')
-  }
-
-  const close = () => {
-   console.log('close')
-  }
-  
-  block.addEventListener('close', () => {
-    open()
-    closeOthers(others)
-  })
-
-  return {
-    open,
-    close
-  }
-})
-```

@@ -1,6 +1,13 @@
-import { queryAll } from './utils/query-all.js'
+import { queryAll } from './utils/query-all'
 
-export const moonBlock = (selector, cb) => {
+interface props {
+  block: Element,
+  others: Array<object>
+}
+
+type Callback = ({}: props) => object
+
+export const moonBlock = (selector: string, cb: Callback) => {
   const listComponents = queryAll(selector).map(block => {
     const others = []
 
