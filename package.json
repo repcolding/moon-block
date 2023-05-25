@@ -1,6 +1,6 @@
 {
   "name": "@verno.digital/moon-block",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "keywords": [
     "@verno.digital"
   ],
@@ -19,6 +19,10 @@
   },
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "esbuild src/index.ts --outfile=dist/index.mjs --bundle --format=esm",
     "postbuild": "tsc --project tsconfig.build.json"
