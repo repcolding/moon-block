@@ -1,20 +1,6 @@
 {
   "name": "@verno.digital/moon-block",
-  "type": "module",
-  "version": "2.1.1",
-  "main": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "license": "MIT",
-  "scripts": {
-    "build": "esbuild src/index.ts --outfile=dist/index.mjs --bundle --format=esm",
-    "postbuild": "tsc --project tsconfig.build.json"
-  },
+  "version": "2.1.2",
   "keywords": [
     "@verno.digital"
   ],
@@ -22,7 +8,21 @@
     "type": "git",
     "url": "git+https://github.com/repcolding/moon-block.git"
   },
+  "license": "MIT",
   "author": "telegramm: @repcolding; site: https://verno.digital",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "esbuild src/index.ts --outfile=dist/index.mjs --bundle --format=esm",
+    "postbuild": "tsc --project tsconfig.build.json"
+  },
   "devDependencies": {
     "esbuild": "^0.17.18",
     "prettier": "^2.8.8",
