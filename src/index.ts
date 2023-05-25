@@ -1,14 +1,14 @@
 import { queryAll } from './utils/query-all'
 
-interface props {
-  block: Element,
+interface Props {
+  block: Element
   others: Array<object>
 }
 
-type Callback = ({}: props) => object
+type Callback = ({}: Props) => object
 
 export const moonBlock = (selector: string, cb: Callback) => {
-  const listComponents = queryAll(selector).map(block => {
+  const listComponents = queryAll(selector).map((block) => {
     const others = []
 
     return {
@@ -18,10 +18,10 @@ export const moonBlock = (selector: string, cb: Callback) => {
   })
 
   for (const component of listComponents) {
-    const filterList = listComponents.filter(item => item !== component)
+    const filterList = listComponents.filter((item) => item !== component)
 
-    filterList.forEach(async otherComponent => (
+    filterList.forEach(async (otherComponent) =>
       component.others.push(await otherComponent.methods)
-    ))
+    )
   }
 }

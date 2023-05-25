@@ -1,10 +1,17 @@
 {
   "name": "@verno.digital/moon-block",
-  "version": "2.0.0",
-  "main": "dist/index.js",
+  "type": "module",
+  "version": "2.1.0",
+  "main": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "license": "MIT",
   "scripts": {
-    "build": "esbuild src/index.ts --outfile=dist/index.js --bundle --format=esm",
+    "build": "esbuild src/index.ts --outfile=dist/index.mjs --bundle --format=esm",
     "postbuild": "tsc --project tsconfig.build.json"
   },
   "keywords": [
@@ -21,6 +28,5 @@
     "prettier": "^2.8.8",
     "tsc": "^2.0.4",
     "typescript": "^5.0.4"
-  },
-  "private": false
+  }
 }
